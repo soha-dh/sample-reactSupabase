@@ -1,4 +1,4 @@
-import { Form, useActionData, useNavigation } from "react-router-dom";
+import { Form, useActionData, useNavigation, Link } from "react-router-dom";
 
 type ActionData = {
   error?: string;
@@ -15,6 +15,14 @@ export default function Register() {
       <h1 className="text-2xl font-bold mb-4">Register</h1>
 
       <Form method="post" className="flex flex-col gap-3">
+         <input
+          name="name"
+          type="text"
+          placeholder="Name"
+          required
+          className="border p-2 rounded"
+        />
+
         <input
           name="email"
           type="email"
@@ -37,11 +45,15 @@ export default function Register() {
 
         <button
           disabled={isSubmitting}
-          className="bg-black text-white p-2 rounded disabled:opacity-50"
+          className="bg-black text-white p-2 rounded disabled:opacity-50 mb-7"
         >
           {isSubmitting ? "Loading..." : "Register"}
         </button>
       </Form>
+
+      <span>Has Account already? <Link className="text-blue-600 underline" to="/login">
+          Login
+        </Link></span>
     </div>
   );
 }

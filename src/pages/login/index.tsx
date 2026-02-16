@@ -1,4 +1,4 @@
-import { Form, useActionData, useNavigation } from "react-router-dom";
+import { Form, useActionData, useNavigation, Link } from "react-router-dom";
 
 type ActionData = {
   error?: string;
@@ -37,11 +37,14 @@ export default function Login() {
 
         <button
           disabled={isSubmitting}
-          className="bg-black text-white p-2 rounded disabled:opacity-50"
+          className="bg-black text-white p-2 rounded disabled:opacity-50 mb-7"
         >
           {isSubmitting ? "Loading..." : "Login"}
         </button>
       </Form>
+       <span>don't have account? <Link className="text-blue-600 underline" to="/register">
+          Register
+        </Link></span>
     </div>
   );
 }
