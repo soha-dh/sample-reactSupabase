@@ -3,7 +3,7 @@ function App() {
 
   return (
     <>
- <div>React sample project by SOHA</div>
+ <div className="p-5">React sample project by SOHA</div>
     </>
   )
 }
