@@ -13,6 +13,7 @@ import { dashboardLoader } from "./routes/dashboard.action";
 import { loginAction } from "./routes/login.action";
 import { registerAction } from "./routes/register.action";
 import { logoutAction } from "./routes/logout";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
